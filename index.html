@@ -176,21 +176,73 @@
             color: #0056b3;
             font-size: 15px;
         }
+        .get{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .marquee {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        background: #f8f9fa;
+        border-top: 2px solid #007bff;
+        border-bottom: 2px solid #007bff;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    .slide-gallery {
+        display: flex;
+        animation: scroll 10s linear infinite;
+        width: fit-content;
+        gap: 20px;
+    }
+
+    .slide-gallery img {
+        height: 60px;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .slide-gallery img:hover {
+        transform: scale(1.1);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
     </style>
 </head>
 <body>
+    
     <center>
         <header>
-         <h1>Bauchi Geographic information System</h1>
+            <div class="logo">
+                <img src="LOGO.png" alt="BAGIS">
+            </div>
+            <h1>Bauchi Geographic Information System (BAGIS)</h1>
+            <div class="marquee">
+                <div class="slide-gallery">
+                    <img src="gov (1).jpg" alt="Slide 1">
+                    <img src="gov (2).jpg" alt="Slide 2">
+                    <img src="gov (3).jpg" alt="Slide 3">
+                </div>
+            </div>
         </header>
-    
     </center>
     <nav>
-        <a href="#home">Home</a>
+        <a href="index.html">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
+    
 
 <!---
     <div class="slideshow">
@@ -204,8 +256,8 @@
 
 -->
     <div class="main">
-        <h2>Welcome to Bauchi Geographic informationSystem</h2>
-        <button onclick="getStarted()">Get Started</button>
+        <h2>Welcome to Bauchi Geographic informationSystem (BAGIS)</h2>
+        <button  ><a class="get" href="signup.html">Get Started</a></button>
        <br> <a class="how" href="how_it_works.html">How it works</a>
     </div>
 
@@ -214,7 +266,7 @@
         <div class="staff">
             <img src="web.jpg" alt="web">
             <img src="ubaidullah.jpg" alt="ubaidullah">
-            <img src="gwamnaty.jpg" alt="gwamnaty">
+            <img src="AMBASSADOR.jpg" alt="AMBASSADOR">
         </div>
     </div>
 
@@ -240,9 +292,7 @@
 
         setInterval(showNextSlide, 5000);
 
-        function getStarted() {
-            alert('Getting Started! Redirecting...');
-        }
+       
     </script>
 </body>
 </html>
